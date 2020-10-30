@@ -1,0 +1,41 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  # unique name per namespace for the template
+  name: jfog-repo
+  # title of the template
+  title: JFrog Repo template
+  # a description of the template
+  description: A template to create a JFrog repo for you/your team
+  # some tags to display in the frontend
+  tags:
+    - recommended
+    - jfrog
+spec:
+  # which templater key to use in the templaters builder
+  templater: cookiecutter
+  # what does this template create
+  type: repo
+  # if the template is not in the current directory where this definition is kept then specify
+  path: "./template"
+  # the schema for the form which is displayed in the frontend.
+  # should follow JSON schema for forms: https://jsonforms.io/
+  schema:
+    required:
+      - team_name
+      - repo_type
+      - ad_group
+    properties:
+      team_name:
+        title: Team Name
+        type: string
+        description: name for your team
+      repo_type:
+        title: Repository Type
+        type: string
+        description: Type of repository
+        enum: ["Maven", "Gradle", "NPM"]
+      ad_group:
+        title: AD Group for Access
+        type: string
+        description: LDAP group eg. ATeam-PROD-ZA
