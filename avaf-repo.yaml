@@ -4,7 +4,7 @@ metadata:
   name: avaf-repo
   description: another example of a repo
   tags:
-    - JFrog
+    - jfrog
     - artifactory
 spec:
   type: jfrog
