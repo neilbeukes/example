@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Repo
+metadata:
+  name: subatomic-repo
+  description: an example of a repo
+  tags:
+    - JFrog
+    - artifactory
+spec:
+  type: jfrog
+  lifecycle: experimental
+  owner: guest
