@@ -4,7 +4,7 @@ metadata:
   name: subatomic-repo
   description: an example of a repo
   tags:
-    - JFrog
+    - jfrog
     - artifactory
 spec:
   type: jfrog
